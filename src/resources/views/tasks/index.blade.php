@@ -35,7 +35,29 @@
                     </nav>
                 </div>
                 <div class="column col-md-8">
-
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Task</div>
+                        <div class="panel-body">
+                            <div class="text-right">
+                                <a href="#" class="btn btn-default btn-block">
+                                    Add Task
+                                </a>
+                            </div>
+                        </div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Status</th>
+                                    <th>Expire</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
