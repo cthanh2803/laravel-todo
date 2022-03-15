@@ -20,13 +20,13 @@
                     <nav class="panel panel-default">
                         <div class="panel-heading">
                             <div class="panel-body">
-                                <a href="#" class="btn btn-default btn-block">
+                                <a href="{{ route('folders.create') }}" class="btn btn-default btn-block">
                                 Add Folders
                                 </a>
                             </div>
                             <div class="list-group">
                                 @foreach($folders as $folder)
-                                    <a href="{{ route('tasks.index', ['id' => $folder->id]) }}" class="list-group-item {{ $current_folder_id === $folder->id ? 'active' : '' }}"> 
+                                    <a href="{{ route('tasks.index', ['id' => $folder->id]) }}" class="list-group-item {{ $current_folder_id === $folder->id ? 'active' : '' }}">
                                         {{ $folder->title }}
                                     </a>
                                 @endforeach
@@ -54,7 +54,16 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                
+                                @foreach($tasks as task)
+                                <tr>
+                                    <td>{{ $task->title }}</td>
+                                    <td>
+                                        <span class="label {{ $task->status_class }}">{{ $task->status_label }}</span>
+                                    </td>
+                                    <td>{{ $task->formatted_due_date }}</td>
+                                    <td><a href="#">Edit</a></td>
+                                </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
