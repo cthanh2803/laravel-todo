@@ -55,6 +55,6 @@ class EditTask extends FormRequest
 
         return $messages + [
             'status.in' => ':attribute' . $status_labels . 'please input',
-        ]
+        ];
     }
 }

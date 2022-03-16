@@ -25,10 +25,8 @@ class CreateTask extends FormRequest
     {
         return [
             //
-            return [
-                'title' => 'required|max:100',
-                'due_date' => 'required|date|after_or_equal:today',
-            ];
+            'title' => 'required|max:100',
+            'due_date' => 'required|date|after_or_equal:today',
         ];
     }
 
@@ -44,6 +42,6 @@ class CreateTask extends FormRequest
     {
         return [
             'due_date.after_or_equal' => ':attribute Please input the date after today.'
-        ]
+        ];
     }
 }
